@@ -1,12 +1,13 @@
 import React from 'react';
 import {AiOutlineLine, AiOutlineClose, AiOutlineBorder} from 'react-icons/ai'
 
-const ChatHeader = ({setFullscreen, fullscreen}) => {
+const WindowHeader = ({setFullscreen, fullscreen, title}) => {
+
     return (
         <div className="window-header">
             <div className="window-header-text">
-                <span className="window-header-title-icon"><img src="/msn.svg" alt="" /></span>
-                <h3 className="window-header-title">Messenger</h3>
+                <span className="window-header-title-icon"><img src="/icons/msn.png" alt="" /></span>
+                <h3 className="window-header-title">{title}</h3>
             </div>
             <div className="window-header-icons">
                 <span className="window-header-icon minimize">
@@ -23,4 +24,4 @@ const ChatHeader = ({setFullscreen, fullscreen}) => {
     );
 };
 
-export default ChatHeader;
+export default WindowHeader;

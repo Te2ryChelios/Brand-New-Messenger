@@ -9,7 +9,15 @@ const ChatBody = () => {
           To :
         </div>
         <div className="window-body-chat-content">
-        test
+          <div className="window-chat-message">
+            <span className="window-chat-message-username">John doe says:</span>
+            <span className="window-chat-message-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo a in facere, officia totam voluptas distinctio natus culpa molestias, eum incidunt quisquam. A ipsum illo dolorum molestias nostrum, vel voluptatibus!</span>
+          </div>
+
+          <div className="window-chat-message">
+            <span className="window-chat-message-username">You say:</span>
+            <span className="window-chat-message-content">officia totam voluptas distinctio natus culpa molestias, eum incidunt quisquam. A ipsum illo dolorum molestias nostrum, vel voluptatibus!</span>
+          </div>
         </div>
       </div>
     </div>
@@ -22,7 +30,7 @@ const ChatBody = () => {
     <div className="window-body-form">
       <div className="window-body-form-container">
         <div className="window-body-form-header">
-          test
+          // Icons, wizz etc
         </div>
         <div className="window-body-form-content">
           <textarea name="" id="" rows="4"></textarea>

@@ -1,16 +1,14 @@
 import React, {useState} from 'react';
 import ChatBody from './body';
-import ChatHeader from './header';
-import ChatMenu from './menu';
+import WindowMenu from '../menu';
+import WindowHeader from '../header';
 
 const Chat = () => {
   const [fullscreen, setFullscreen] = useState(false);
   return (
     <div className={`window ${fullscreen ? "fullscreen" : ""}`}>
-    <ChatHeader setFullscreen={setFullscreen} fullscreen={fullscreen} />
-
-    <ChatMenu />
-      
+    <WindowHeader title={"Messenger"} setFullscreen={setFullscreen} fullscreen={fullscreen} />
+    <WindowMenu />
     <ChatBody />
   </div>
     );

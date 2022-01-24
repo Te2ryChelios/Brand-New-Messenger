@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ChatMenu = () => {
+const WindowMenu = () => {
     return (
         <div className="window-menu">
             <ul>
@@ -14,4 +14,4 @@ const ChatMenu = () => {
     );
 };
 
-export default ChatMenu;
+export default WindowMenu;

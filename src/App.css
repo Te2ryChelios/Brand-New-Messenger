@@ -48,7 +48,7 @@ overflow: hidden;
 }
 
 .center{
-  height: calc(100vh - 40px);
+  height: calc(100vh - 30px);
   width: 100%;
   display: flex;
   align-items: center;
@@ -118,6 +118,7 @@ overflow: hidden;
   height: 16px;
   color: var(--white);
   margin-right: 5px;
+  margin-top: 3px
 }
 
 .window-body{
@@ -176,6 +177,20 @@ overflow: hidden;
 
 .window-body-chat-content{
   padding: 5px;
+}
+
+.window-chat-message{
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0;
+  font-size: .85rem;
+}
+
+.window-chat-message-username{
+  color: #737373;
+}
+
+.window-chat-message-content{
 }
 
 .window-body-form{

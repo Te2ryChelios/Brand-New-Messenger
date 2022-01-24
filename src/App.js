@@ -1,6 +1,7 @@
 import './App.css';
-import Chat from './components/chat';
+import Chat from './components/windows/chat';
 import Footer from './components/footer';
+import Contacts from './components/windows/contacts';
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
     <div className="App">
       <div className="center">
         <Chat />
+        {/* <Contacts /> */}
       </div>
       <Footer />
     </div>
