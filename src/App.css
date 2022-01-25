@@ -125,6 +125,9 @@ overflow: hidden;
   width: 100%;
   height: 100%;
   background: linear-gradient(0deg, #dae5f7, #d7e4f7);
+}
+
+.window-chat-grid{
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -257,6 +260,61 @@ img.window-body-sidebar-avatar{
   ;
   background: #eaf0fe;
 }
+
+ /* CONTACTS */
+
+ .window-contacts-header{
+   display: flex;
+  padding: 10px;
+  color: #101221;
+ }
+
+ .window-contacts-header-avatar{
+  width: 60px;
+  height: auto;
+  border: 1px solid #64696d;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+.window-contacts-header-text {
+  font-weight: bold;
+}
+
+.window-contacts-header-text span{
+  color: #64696d;
+  font-weight: normal;
+}
+
+
+ .window-contacts-list{
+   padding: 5px;
+   font-size: .8rem;
+ }
+
+ .window-contacts-list-title{
+   color: #101221;
+   font-weight: 600;
+   margin-bottom: 5px;
+ }
+
+ .window-contacts-list li{
+   margin-left: 10px;
+   padding: 2px 0;
+ }
+
+ .window-contacts-list li a{
+  color: #101221;
+  display: flex;
+  align-items: center;
+}
+
+.window-contacts-list li a img{
+  margin-right: 5px;
+}
+
+
+ /* FOOTER */
 
 footer{
   position: fixed;

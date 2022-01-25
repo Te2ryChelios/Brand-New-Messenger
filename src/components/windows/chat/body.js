@@ -2,7 +2,7 @@ import React from 'react';
 
 const ChatBody = () => {
   return (
-    <div className="window-body">
+    <div className="window-body window-chat-grid">
     <div className="window-body-chat">
       <div className="window-body-chat-container">
         <div className="window-body-chat-header">
