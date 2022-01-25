@@ -1,7 +1,14 @@
 import React from 'react';
 import {AiOutlineLine, AiOutlineClose, AiOutlineBorder} from 'react-icons/ai'
 
-const WindowHeader = ({setFullscreen, fullscreen, title}) => {
+const WindowHeader = ({setFullscreen, fullscreen, title, setIsOpen}) => {
+
+    
+
+  const handleClose = (e) => {
+    e.preventDefault()
+    setIsOpen(false)
+  }
 
     return (
         <div className="window-header">
@@ -16,7 +23,7 @@ const WindowHeader = ({setFullscreen, fullscreen, title}) => {
                 <span className="window-header-icon fullscreen" onClick={(e) => {setFullscreen(!fullscreen)}}>
                 <AiOutlineBorder />
                 </span>
-                <span className="window-header-icon exit">
+                <span className="window-header-icon exit" onClick={handleClose}>
                 <AiOutlineClose />
                 </span>
             </div>

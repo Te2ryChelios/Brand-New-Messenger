@@ -1,6 +1,13 @@
 import React from 'react';
 
-const ContactsBody = () => {
+const ContactsBody = ({isOpen, setChatIsOpen}) => {
+
+  const openChat = (e) => {
+    e.preventDefault()
+    isOpen(false)
+    setChatIsOpen(true)
+  }
+
   return (
     <div className="window-body column">
         <div className="window-contacts-header">
@@ -10,7 +17,7 @@ const ContactsBody = () => {
         <div className="window-contacts-list">
           <p className='window-contacts-list-title'>Online (5)</p>
           <ul>
-            <li><a href=""><img src="./icons/msn-online.png"/> John Doe</a></li>
+            <li><a href="" onClick={openChat}><img src="./icons/msn-online.png"/> John Doe</a></li>
             <li><a href=""><img src="./icons/msn-online.png"/> John Doe</a></li>
             <li><a href=""><img src="./icons/msn-online.png"/> John Doe</a></li>
             <li><a href=""><img src="./icons/msn-online.png"/> John Doe</a></li>
