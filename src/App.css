@@ -190,8 +190,6 @@ overflow: hidden;
   color: #737373;
 }
 
-.window-chat-message-content{
-}
 
 .window-body-form{
   grid-column: span 2;
@@ -306,6 +304,17 @@ footer{
   background: linear-gradient(0deg, #158ae4, #1385e0);
   display: flex;
   align-items: center;
+
+  font-size: .8rem;
+}
+
+.footer-icons img{
+  height: 16px;
+  width: auto;
+}
+
+.footer-icons a{
+  color: white;
 }
 
 .footer-icons > * {
