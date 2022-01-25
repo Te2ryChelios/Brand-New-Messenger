@@ -1,33 +1,41 @@
 import React from 'react';
 import "./start.css"
-import { AiOutlineLogout} from 'react-icons/ai'
-import {BsKeyFill} from 'react-icons/bs'
+import { supabase } from '../../server';
 
-const Start = ({openContacts}) => {
+const Start = ({username, website, avatar_url, openContacts, openProfile, setMenuIsOpen, session}) => {
+
     return (
         <div className="start">
 
             <div className="start-header">
                 <img src="https://picsum.photos/150" alt="" className="start-header-avatar" />
-                <p className="start-header-username">John Doe</p>
+                <p className="start-header-username">{username || session.user.email}</p>
             </div>
 
             <div className="start-body">
-                <div className="start-body-item" onClick={openContacts}>
+                <div className="start-body-item" onClick={(e) => {openContacts(e); setMenuIsOpen(false)}}>
                     <img src="./icons/msn.png" alt="" />
                     <div className="start-body-item-text">
                         <h4 className="start-body-item-title">MSN</h4>
                         <h4 className="start-body-item-subtitle">Messenger</h4>
                     </div>
                 </div>
+
+                <div className="start-body-item" onClick={(e) => {openProfile(e); setMenuIsOpen(false)}}>
+                    <img src="./icons/msn.png" alt="" />
+                    <div className="start-body-item-text">
+                        <h4 className="start-body-item-title">Profile</h4>
+                        <h4 className="start-body-item-subtitle">Edit profile</h4>
+                    </div>
+                </div>
             </div>
 
             <div className="start-footer">
-                <div className="start-footer-button">
+                <div className="start-footer-button" onClick={() => supabase.auth.signOut()}>
                     <img src="./icons/logoff.png" className="start-footer-icon"  alt="Log Off" />
                     <span className="start-footer-button-label">Log Off</span>
                 </div>
-                <div className="start-footer-button">
+                <div className="start-footer-button" onClick={() => window.close()}>
                     <img src="./icons/logout.png" className="start-footer-icon"  alt="Turn Off" />
                     <span className="start-footer-button-label">Turn off Computer</span>
                 </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ContactsBody = ({isOpen, setChatIsOpen}) => {
+const ContactsBody = ({isOpen, setChatIsOpen, session, username, website}) => {
 
   const openChat = (e) => {
     e.preventDefault()
@@ -12,7 +12,7 @@ const ContactsBody = ({isOpen, setChatIsOpen}) => {
     <div className="window-body column">
         <div className="window-contacts-header">
           <img src="https://picsum.photos/150" className="window-contacts-header-avatar" />
-          <div className="window-contacts-header-text">John Doe <span>(online)</span> </div>
+          <div className="window-contacts-header-text">{username || session.user.email } <span>(online)</span> <br /> {website && website} </div>
         </div>
         <div className="window-contacts-list">
           <p className='window-contacts-list-title'>Online (5)</p>

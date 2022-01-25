@@ -9,6 +9,8 @@
     --light-blue: #90CAF9;
     --light-red: #EF9A9A;
     --red: #DE482B;
+    --light-red: #f36e55;
+    --dark-red: #84220f;
     --light-green: #A5D6A7;
     --green: #81C046;
     --pink: #E91E63;
@@ -96,14 +98,17 @@ a.desktop-item{
 /* WINDOW */
 .window{
   position: absolute;
-  min-width: 480px;
-  width: 720px;
+  min-width: 400px;
   border: 2px solid var(--blue);
   border-radius: 10px;
   overflow: hidden;
   padding: 0;
   display: flex;
   flex-direction: column;
+}
+
+.window-chat{
+  width: 720px;
 }
 
 @media screen and (max-width: 745px) {
@@ -367,6 +372,33 @@ img.window-body-sidebar-avatar{
 }
 
 
+/* *************** PROFILE ********** */
+
+.window-body-profile{
+  display: flex;;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-item{
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0;
+  color: #272a71;
+}
+
+.profile-input{
+  border: 1px solid #272a71;
+  padding: 2px;
+}
+
+.profile-button{
+border: 1px solid #272a71;
+padding: 5px;
+background: white;
+}
+
  /* FOOTER */
 
 footer{
@@ -408,6 +440,15 @@ footer{
   margin-right: 5px;
 }
 
+.start-footer-button{
+  cursor: pointer;
+}
+
+.start-body{
+  display: flex;
+  flex-direction: column;
+}
+
 .footer-icons{
   color: white;
   padding: 0 20px;
@@ -430,4 +471,40 @@ footer{
 
 .footer-icons > * {
   margin: 0 5px;
+}
+
+
+/* ********** ALERT ********** */
+
+.alert{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+
+  z-index: 100;
+}
+
+.alert-close{
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding-top: 5px;
+}
+
+.alert-error{
+  background: linear-gradient(0deg, var(--dark-red), var(--red));
+  color: white;
+  box-shadow: 0 0 0 1px var(--red), 0 0 0 2px var(--dark-red);
+}
+
+.alert-success{
+  background: linear-gradient(0deg, #5e9e2b, var(--green));
+  color: #254809;
+  box-shadow: 0 0 0 1px #a4dc76, 0 0 0 2px #254809;
 }

@@ -6,10 +6,11 @@ import WindowHeader from '../header';
 const Chat = ({setChatIsOpen}) => {
   const [fullscreen, setFullscreen] = useState(false);
   return (
-    <div className={`window ${fullscreen ? "fullscreen" : ""}`}>
+    <div className={`window window-chat ${fullscreen ? "fullscreen" : ""}`}>
     <WindowHeader title={"Messenger"} setFullscreen={setFullscreen} fullscreen={fullscreen} setIsOpen={setChatIsOpen} />
     <WindowMenu />
-    <ChatBody />
+    <ChatBody 
+    />
   </div>
     );
 };
