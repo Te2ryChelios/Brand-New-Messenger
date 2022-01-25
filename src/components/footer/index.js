@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { AiOutlineWifi, AiFillSound} from 'react-icons/ai'
 import Start from '../Start';
 
-const Footer = () => {
+const Footer = ({openContacts}) => {
     const [menuIsOpen, setMenuIsOpen] = useState(false)
     const [time, setTime] = useState()
 
@@ -41,7 +41,7 @@ const Footer = () => {
                 <img src="./icons/defender.png" />
                 <span>{time}</span>
             </div>
-            {menuIsOpen && <Start />}
+            {menuIsOpen && <Start openContacts={openContacts} />}
         </footer>
     );
 };

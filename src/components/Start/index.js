@@ -3,7 +3,7 @@ import "./start.css"
 import { AiOutlineLogout} from 'react-icons/ai'
 import {BsKeyFill} from 'react-icons/bs'
 
-const Start = () => {
+const Start = ({openContacts}) => {
     return (
         <div className="start">
 
@@ -13,7 +13,7 @@ const Start = () => {
             </div>
 
             <div className="start-body">
-                <div className="start-body-item">
+                <div className="start-body-item" onClick={openContacts}>
                     <img src="./icons/msn.png" alt="" />
                     <div className="start-body-item-text">
                         <h4 className="start-body-item-title">MSN</h4>
