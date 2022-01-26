@@ -1,8 +1,9 @@
 import React from 'react';
 import "./start.css"
 import { supabase } from '../../server';
+import {Link} from 'react-router-dom'
 
-const Start = ({username, website, avatar_url, openContacts, openProfile, setMenuIsOpen, session}) => {
+const Start = ({username, website, avatar_url, session}) => {
 
     return (
         <div className="start">
@@ -13,15 +14,15 @@ const Start = ({username, website, avatar_url, openContacts, openProfile, setMen
             </div>
 
             <div className="start-body">
-                <div className="start-body-item" onClick={(e) => {openContacts(e); setMenuIsOpen(false)}}>
+                <Link className="start-body-item" to="/contacts">
                     <img src="./icons/msn.png" alt="" />
                     <div className="start-body-item-text">
                         <h4 className="start-body-item-title">MSN</h4>
                         <h4 className="start-body-item-subtitle">Messenger</h4>
                     </div>
-                </div>
+                </Link>
 
-                <div className="start-body-item" onClick={(e) => {openProfile(e); setMenuIsOpen(false)}}>
+                <div className="start-body-item">
                     <img src="./icons/msn.png" alt="" />
                     <div className="start-body-item-text">
                         <h4 className="start-body-item-title">Profile</h4>

@@ -3,14 +3,14 @@ import WindowHeader from '../header';
 import WindowMenu from '../menu';
 import ContactsBody from './body';
 
-const Contacts = ({setContactsIsOpen, setChatIsOpen,  session, username, website}) => {
+const Contacts = ({session, username, website}) => {
   const [fullscreen, setFullscreen] = useState(false);
 
   return (
     <div className={`window ${fullscreen ? "fullscreen" : ""}`}>
-      <WindowHeader title={"Messenger - Contacts"} setFullscreen={setFullscreen} fullscreen={fullscreen} setIsOpen={setContactsIsOpen} />
+      <WindowHeader title={"Messenger - Contacts"} setFullscreen={setFullscreen} fullscreen={fullscreen}  />
       <WindowMenu />
-      <ContactsBody isOpen={setContactsIsOpen} setChatIsOpen={setChatIsOpen} session={session} username={username} website={website} />
+      <ContactsBody session={session} username={username} website={website} />
     </div>
     );
 };
